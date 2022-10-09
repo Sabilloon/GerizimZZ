@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=ORTEGA\ORTEGA1;Initial Catalog=Gerizim;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="ortega\ortega1.Gerizim.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ortega\ortega1.Gerizim.dbo" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Factura.ID_factura, Cliente.ID_cliente, Cliente.primerNombre, Factura.totaldescuento, Factura.estadoPago, Producto.precio_producto
+FROM     Cliente INNER JOIN
+                  Factura ON Cliente.ID_cliente = Factura.ID_cliente CROSS JOIN
+                  Producto</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_factura" DataSetColumn="ID_factura" />
+              <Mapping SourceColumn="ID_cliente" DataSetColumn="ID_cliente" />
+              <Mapping SourceColumn="primerNombre" DataSetColumn="primerNombre" />
+              <Mapping SourceColumn="totaldescuento" DataSetColumn="totaldescuento" />
+              <Mapping SourceColumn="estadoPago" DataSetColumn="estadoPago" />
+              <Mapping SourceColumn="precio_producto" DataSetColumn="precio_producto" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet1" msprop:Generator_DataSetName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_UserTableName="DataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_factura" msprop:Generator_ColumnPropNameInRow="ID_factura" msprop:Generator_ColumnPropNameInTable="ID_facturaColumn" msprop:Generator_ColumnVarNameInTable="columnID_factura" msprop:Generator_UserColumnName="ID_factura" type="xs:int" />
+              <xs:element name="ID_cliente" msprop:Generator_ColumnPropNameInRow="ID_cliente" msprop:Generator_ColumnPropNameInTable="ID_clienteColumn" msprop:Generator_ColumnVarNameInTable="columnID_cliente" msprop:Generator_UserColumnName="ID_cliente" type="xs:int" />
+              <xs:element name="primerNombre" msprop:Generator_ColumnPropNameInRow="primerNombre" msprop:Generator_ColumnPropNameInTable="primerNombreColumn" msprop:Generator_ColumnVarNameInTable="columnprimerNombre" msprop:Generator_UserColumnName="primerNombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="totaldescuento" msprop:Generator_ColumnPropNameInRow="totaldescuento" msprop:Generator_ColumnPropNameInTable="totaldescuentoColumn" msprop:Generator_ColumnVarNameInTable="columntotaldescuento" msprop:Generator_UserColumnName="totaldescuento" type="xs:double" minOccurs="0" />
+              <xs:element name="estadoPago" msprop:Generator_ColumnPropNameInRow="estadoPago" msprop:Generator_ColumnPropNameInTable="estadoPagoColumn" msprop:Generator_ColumnVarNameInTable="columnestadoPago" msprop:Generator_UserColumnName="estadoPago" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="precio_producto" msprop:Generator_ColumnPropNameInRow="precio_producto" msprop:Generator_ColumnPropNameInTable="precio_productoColumn" msprop:Generator_ColumnVarNameInTable="columnprecio_producto" msprop:Generator_UserColumnName="precio_producto" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

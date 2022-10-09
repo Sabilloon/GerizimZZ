@@ -1,0 +1,7 @@
+﻿[*.{cs,vb}]
+
+# IDE0003: Quitar cualificación
+dotnet_diagnostic.IDE0003.severity = suggestion
+
+# CS7064: Error al abrir el archivo de icono C:\Users\HP\OneDrive\Documentos\GitHub\GerizimZZ\199848567_4174426372616759_1130399733558613204_n-PhotoRoom.ico: No se pudo encontrar el archivo 'C:\Users\HP\OneDrive\Documentos\GitHub\GerizimZZ\199848567_4174426372616759_1130399733558613204_n-PhotoRoom.ico'.
+dotnet_diagnostic.CS7064.severity = warning
